@@ -2,5 +2,6 @@
 A fun, front-end, javascript game.
 
 ## Enter Runtime Variables
-HOST=<your-host>
-PORT=<your-port>
+(1) HOST='your-server-host'
+
+(2) PORT='your-server-port'
