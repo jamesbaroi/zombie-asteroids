@@ -1,5 +1,5 @@
 # Zombie Asteroids
-A fun, front-end, javascript game.
+A fun, front-end, javascript, canvas game.
 
 ## Set runtime variables
 (1) HOST='your-server-host'
