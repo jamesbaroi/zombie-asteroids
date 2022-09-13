@@ -4,7 +4,7 @@
 - Press w to drop space mines (requires gold).
 
 ## Screen Shot
-  <img src="https://github.com/jamesbaroi/images/blob/master/periodic-table.jpg" alt="Periodic Table Screen Shot">
+  <img src="https://github.com/jamesbaroi/images/blob/master/zombie-asteroids.jpg" alt="Zombie Asteroids Screen Shot">
 
 ## Set runtime variables
     HOST=your-server-host
