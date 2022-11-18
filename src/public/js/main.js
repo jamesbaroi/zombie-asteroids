@@ -113,7 +113,7 @@ function everyinterval(n) {
 
 /* Create game component ----------------------------------------------------*/
 /* --------------------------------------------------------------------------*/
-class component {
+class Component {
 
   constructor(width, height, color, x, y, type) {
 
@@ -258,9 +258,9 @@ class component {
 /* --------------------------------------------------------------------------*/
 function startGame() {
 
-  myGamePiece = new component(50, 50, 'red', 1500, 2400);
+  myGamePiece = new Component(50, 50, 'red', 1500, 2400);
 
-  myScoreCount = new component('50px', 'monospace', 'goldenrod', 50, 50, 'text');
+  myScoreCount = new Component('50px', 'monospace', 'goldenrod', 50, 50, 'text');
 
   myGameArea.start();
 
@@ -291,7 +291,7 @@ function updateGameArea() {
   /* Define game-over */
   function gameOver() {
 
-    myResult = new component('50px', 'monospace', 'red', 50, 1150, 'text');
+    myResult = new Component('50px', 'monospace', 'red', 50, 1150, 'text');
 
     /* Handle single kill response with correct grammar */
     if (myKillCount == 1) {
@@ -312,7 +312,7 @@ function updateGameArea() {
   /* Define victory */
   function victory() {
 
-    myResult = new component('50px', 'monospace', 'green', 50, 1150, 'text');
+    myResult = new Component('50px', 'monospace', 'green', 50, 1150, 'text');
 
     if (myKillCount == 1) {
 
@@ -481,7 +481,7 @@ function updateGameArea() {
     x = Math.floor(Math.random()*myGameArea.canvas.width);
     y = 0;
 
-    myObstacles.push(new component(50, 50, 'gray', x, y));
+    myObstacles.push(new Component(50, 50, 'gray', x, y));
 
   }
 
@@ -490,7 +490,7 @@ function updateGameArea() {
     x = Math.floor(Math.random()*myGameArea.canvas.width);
     y = 0;
 
-    myGold.push(new component(50, 50, 'goldenrod', x, y));
+    myGold.push(new Component(50, 50, 'goldenrod', x, y));
 
   }
 
@@ -499,7 +499,7 @@ function updateGameArea() {
     x = Math.floor(Math.random()*myGameArea.canvas.width);
     y = 0;
 
-    myHelp.push(new component(50, 50, 'royalblue', x, y));
+    myHelp.push(new Component(50, 50, 'royalblue', x, y));
 
   }
 
@@ -508,18 +508,18 @@ function updateGameArea() {
     y = 100;
     x = Math.floor(Math.random()*myGameArea.canvas.width);
 
-    myHome.push(new component(50, 50, 'hotpink', x, y));
+    myHome.push(new Component(50, 50, 'hotpink', x, y));
 
-    myBlockers.push(new component(50, 50, 'gray', (x + 100), y));
-    myBlockers.push(new component(50, 50, 'gray', (x - 100), y));
+    myBlockers.push(new Component(50, 50, 'gray', (x + 100), y));
+    myBlockers.push(new Component(50, 50, 'gray', (x - 100), y));
 
-    myBlockers.push(new component(50, 50, 'gray', x, (y + 100)));
-    myBlockers.push(new component(50, 50, 'gray', x, (y - 100)));
+    myBlockers.push(new Component(50, 50, 'gray', x, (y + 100)));
+    myBlockers.push(new Component(50, 50, 'gray', x, (y - 100)));
   
-    myBlockers.push(new component(50, 50, 'gray', (x + 100), (y + 100)));
-    myBlockers.push(new component(50, 50, 'gray', (x + 100), (y - 100)));
-    myBlockers.push(new component(50, 50, 'gray', (x - 100), (y + 100)));
-    myBlockers.push(new component(50, 50, 'gray', (x - 100), (y - 100)));
+    myBlockers.push(new Component(50, 50, 'gray', (x + 100), (y + 100)));
+    myBlockers.push(new Component(50, 50, 'gray', (x + 100), (y - 100)));
+    myBlockers.push(new Component(50, 50, 'gray', (x - 100), (y + 100)));
+    myBlockers.push(new Component(50, 50, 'gray', (x - 100), (y - 100)));
   
   }
 
@@ -627,7 +627,7 @@ function updateGameArea() {
 
     if (!fired && myGoldCount > 0) {
 
-      myAmmo.push(new component(25, 25, 'maroon', x, y));
+      myAmmo.push(new Component(25, 25, 'maroon', x, y));
       myGoldCount -= 1;
       fired = true;
 
